@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 50%;
+            max-width: 500px;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .container:hover {
+            transform: translateY(-5px);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin: 10px 0 5px;
+            color: #555;
+        }
+        input[type="text"],
+        input[type="date"],
+        input[type="tel"],
+        input[type="email"],
+        .gender {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        .gender {
+            display: flex;
+            gap: 15px;
+        }
+        .radio-label {
+            font-size: 14px;
+            color: #555;
+        }
+        .submit-btn {
+            background: linear-gradient(90deg, #28a745, #218838);
+            color: #ffffff;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            width: 100%;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .submit-btn:hover {
+            background: linear-gradient(90deg, #218838, #1e7e34);
+            transform: scale(1.05);
+        }
+        .submit-btn:active {
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Student Registration Form</h2>
+        <form action="#" method="post">
+            <!-- Student Name -->
+            <label for="name">Student Name:</label>
+            <input type="text" id="name" name="name" required pattern="[A-Za-z\s]+" title="Name should only contain alphabets">
+           
+            <!-- Date of Birth -->
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+           
+            <!-- Gender -->
+            <label for="gender">Gender:</label>
+            <div class="gender">
+                <label class="radio-label">
+                    <input type="radio" id="male" name="gender" value="male" required> Male
+                </label>
+                <label class="radio-label">
+                    <input type="radio" id="female" name="gender" value="female" required> Female
+                </label>
+                <label class="radio-label">
+                    <input type="radio" id="other" name="gender" value="other" required> Other
+                </label>
+            </div>
+           
+            <!-- Mobile Number -->
+            <label for="mobile">Mobile Number:</label>
+            <input type="tel" id="mobile" name="mobile" required pattern="\d{10}" title="Mobile number should be exactly 10 digits">
+           
+            <!-- Email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required title="Email should contain one '@' symbol">
+           
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
